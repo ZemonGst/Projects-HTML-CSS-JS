@@ -57,3 +57,25 @@ pause.addEventListener('click', () => {
         isRunning = true;
     }
 });
+
+reset.addEventListener('click', () => {
+    // Clear the interval if it's running
+    if (isRunning) {
+        clearInterval(time);
+    }
+
+    // Reset all time variables
+    millisec = 0;
+    sec = 0;
+    min = 0;
+    hr = 0;
+
+    // Reset the display
+    millisecond.textContent = "00";
+    second.textContent = "00";
+    minute.textContent = "00";
+    hour.textContent = "00";
+
+    // Set isRunning to false
+    isRunning = false;
+});
