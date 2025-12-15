@@ -41,9 +41,10 @@ function setTimer() {
 
 /* START */
 start.addEventListener('click', () => {
-    if (!isRunning) {
+    if (!isRunning && hr === 0 && min === 0 && sec === 0 && millisec === 0) {
         time = setInterval(setTimer, 10);
         isRunning = true;
+        pause.textContent = "Pause";
     }
 });
 
@@ -52,9 +53,12 @@ pause.addEventListener('click', () => {
     if (isRunning) {
         clearInterval(time);
         isRunning = false;
+        pause.textContent = "Rsume";
+
     } else {
         time = setInterval(setTimer, 10);
         isRunning = true;
+        pause.textContent = "Pause";
     }
 });
 
@@ -78,4 +82,5 @@ reset.addEventListener('click', () => {
 
     // Set isRunning to false
     isRunning = false;
+    pause.textContent = "Pause";
 });
