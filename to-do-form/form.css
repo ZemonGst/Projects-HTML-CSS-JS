@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+.container {
+    min-height: 448px;
+    height: auto;
+    width: 650px;
+
+    background-color: #BDE4E6;
+    border: 2px solid black;
+    border-radius: 1rem;
+
+    padding: 10px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1000;
+}
+
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-date {
+    border: 2px solid black;
+    border-radius: 1rem;
+    background: none;
+    width: 143px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.form-date:hover {
+    background-color: black;
+    color: white;
+    transition: 0.25s ease-in-out;
+}
+
+
+.underline-input {
+    border: none;
+    border-bottom: 4px solid black;
+    outline: none;
+    background: none;
+    padding: 5px 0;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.task-description-txt {
+    border-bottom: 4px solid black;
+    background: none;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    width: 100%;
+    resize: none;
+    line-height: 1.2;
+    margin-top: 0;
+    padding: 0;
+}
+
+.subtask-detls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+#cancle {
+    border: none;
+    background: none;
+    color: #444;
+    cursor: pointer;
+    padding: 6px 6px;
+    border-radius: 0.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+#cancle:active {
+    background-color: #c8c8c8;
+}
+
+.form-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.default {
+    border: none;
+    background: none;
+    color: #444;
+    cursor: pointer;
+    padding: 6px 6px;
+    border-radius: 0.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+#cancle img {
+    width: 27px;
+}
+
+.close-form img {
+    width: 27px;
+}
+
+.Save-form img {
+    width: 27px;
+}
